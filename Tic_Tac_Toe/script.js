@@ -19,11 +19,11 @@ boxes.forEach( e =>{
 function changeTurn(){
     if(turn === "X"){
         turn = "O";
-        document.querySelector(".bg").style.left = "100px";
+        document.querySelector("#xo").innerHTML = turn;
     }
     else{
         turn = "X";
-        document.querySelector(".bg").style.left = "0";
+        document.querySelector("#xo").innerHTML = turn;
     }
 }
 
@@ -46,9 +46,8 @@ function cheakWin(){
             document.querySelector("#play-again").style.display = "inline";
 
             for(j = 0; j< 3; j++){
-                boxes[winConditions[i][j]].style.backgroundColor = "#08D9D6"
-                boxes[winConditions[i][j]].style.color = "#000"
-
+                boxes[winConditions[i][j]].style.backgroundColor = "#97bdf5"
+                boxes[winConditions[i][j]].style.color = "#fff"
             }
         }
     }
@@ -69,17 +68,18 @@ function checkDraw(){
     }
 }
 
-document.querySelector("#play-again").addEventListener("click", () =>{
+document.querySelector("#play-again").addEventListener("click", () => {
     isGameOver = false;
     turn = 'X';
-    document.querySelector(".bg").style.left = '0';
+    document.querySelector("#xo").innerHTML = turn; 
     document.querySelector("#results").innerHTML = '';
     document.querySelector("#play-again").style.display = "none";
 
-    boxes.forEach( e =>{
+    // Reset box styles
+    boxes.forEach(e => {
         e.innerHTML = '';
-        e.style.removeProperty("background-color");
-        e.style.color = "#fff"
-    })
-} )
+        e.style.backgroundColor = ""; // Reset background color
+        e.style.color = "#000"; // Reset text color
+    });
+});
 
