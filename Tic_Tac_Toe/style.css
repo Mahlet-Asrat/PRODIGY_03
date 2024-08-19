@@ -1,5 +1,5 @@
 *{
-    color: white;
+    color: black;
     font-family: sans-serif;
     transition: ease-in-out;
     user-select: none;
@@ -12,7 +12,7 @@
 }
 
 body{
-    background-color: #252A34 ;
+    background-color: #dde7fb ;
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -25,43 +25,17 @@ body{
     font-size: 38px;
 }
 
-.turn-container{
-    width: 200px;
-    height: 80px;
-    margin: auto;
-    margin-top: 3em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    position: relative;
+.turn{
+    margin: 50px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
-.turn-container h3{
-    font-size: 28px;
-    margin: 0;
-    grid-column-start: 1;
-    grid-column-end: 3;
+#xo{
+    color: rgb(244, 55, 168);
 }
 
-.turn-container .turn-box{
-    border: 3px solid black;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
 
-.turn-container .turn-box:nth-child(even){
-    border-right: none;
-}
-
-.bg{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100px;
-    height: 40px;
-    background-color: #ff4f4f;
-    z-index: -1;
-}
 
 .main-grid{
     display: grid;
@@ -82,21 +56,23 @@ body{
 }
 
 .box:hover{
-    background-color: #ff4f4f;
+    background-color: #f8a7f9;
 }
 
 #play-again{
-    background-color: #ff4f4f;
+    background-color: #4786e6;
+    color: white;
     padding: 10px 25px;
+    margin: 15px;
     border: none;
-    font-size: 1.6rem;
-    border-radius: 5px;
+    font-size: 1.8rem;
+    border-radius: 10px;
     cursor: pointer;
     display: none;
 }
 
 #play-again:hover{
     padding: 10px 40px;
-    background-color: #08D9D6;
-    color: #000;
+    background-color: #eea0e6;
+    color: black;
 }
